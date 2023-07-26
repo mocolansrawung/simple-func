@@ -33,7 +33,7 @@ func scanInputs(n int, inputType string) (inputInt []int, inputStr []string) {
 	return nil, nil
 }
 
-func readAndWriteInputs() []string {
+func ReadAndWriteInputs() []string {
 	_, inputStr := scanInputs(2, "string")
 	fmt.Println("You entered the following inputs:")
 	for i, val := range inputStr {
@@ -43,7 +43,7 @@ func readAndWriteInputs() []string {
 	return inputStr
 }
 
-func appendAndPrintInputs(inputStr []string) (result string) {
+func AppendAndPrintInputs(inputStr []string) (result string) {
 	if inputStr != nil {
 		result := inputStr[0] + inputStr[1]
 		fmt.Println(result)
@@ -53,7 +53,7 @@ func appendAndPrintInputs(inputStr []string) (result string) {
 	return result
 }
 
-func readIntAndWrite(appendedString string) {
+func ReadIntAndWrite(appendedString string) {
 	inputInt, _ := scanInputs(1, "int")
 	input := inputInt[0]
 
