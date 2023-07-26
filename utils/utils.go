@@ -33,25 +33,12 @@ func scanInputs(n int, inputType string) (inputInt []int, inputStr []string) {
 	return nil, nil
 }
 
-func readAndWriteInputs() string {
+func readAndWriteInputs() []string {
 	_, inputStr := scanInputs(2, "string")
-	if inputStr != nil {
-		result := inputStr[0] + inputStr[1]
-		fmt.Println(result)
-		return result
+	fmt.Println("You entered the following inputs:")
+	for i, val := range inputStr {
+		fmt.Printf("Input %d: %s\n", i+1, val)
 	}
-	return "Input error."
+
+	return inputStr
 }
-
-// func appendAndPrintInputs(a, b string) {
-// 	fmt.Printf("%s %s", a, b)
-// 	return
-// }
-
-// func readIntAndTimes() {
-// }
-
-// // fmt.Println("You entered the following inputs:")
-// // for i, val := range inputs {
-// // 	fmt.Printf("Input %d: %d\n", i+1, val)
-// // }
