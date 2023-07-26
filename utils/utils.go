@@ -7,7 +7,7 @@ import (
 func scanInputs(n int, inputType string) (inputInt []int, inputStr []string) {
 	switch inputType {
 	case "int":
-		var inputInt []int
+		inputInt = make([]int, n)
 		for i := 0; i < n; i++ {
 			fmt.Printf("Enter input %d (integer): ", i+1)
 			_, err := fmt.Scan(&inputInt[i])
@@ -17,7 +17,7 @@ func scanInputs(n int, inputType string) (inputInt []int, inputStr []string) {
 			}
 		}
 	case "string":
-		var inputStr []string
+		inputStr = make([]string, n)
 		for i := 0; i < n; i++ {
 			fmt.Printf("Enter input %d (string): ", i+1)
 			_, err := fmt.Scan(&inputStr[i])
@@ -30,7 +30,7 @@ func scanInputs(n int, inputType string) (inputInt []int, inputStr []string) {
 		fmt.Println("inputType not supported right now.")
 	}
 
-	return nil, nil
+	return inputInt, inputStr
 }
 
 func ReadAndWriteInputs() []string {
@@ -45,7 +45,7 @@ func ReadAndWriteInputs() []string {
 
 func AppendAndPrintInputs(inputStr []string) (result string) {
 	if inputStr != nil {
-		result := inputStr[0] + inputStr[1]
+		result = inputStr[0] + inputStr[1]
 		fmt.Println(result)
 		return result
 	}

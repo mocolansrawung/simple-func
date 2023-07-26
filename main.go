@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"main/utils"
 )
 
@@ -12,7 +13,7 @@ func main() {
 	}
 
 	appendedString := utils.AppendAndPrintInputs(inputStr)
-	if appendedString == nil {
+	if appendedString == "" {
 		fmt.Println("Error when appending the strings")
 	}
 
