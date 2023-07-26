@@ -1,7 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"simplefunc/utils/utils"
+)
 
 func main() {
-	fmt.Println("Hello, World")
+	inputStr := utils.ReadAndWriteInputs()
+	if inputStr == nil {
+		fmt.Println("Error when read and write string inputs")
+	}
+
+	appendedString := utils.AppendAndPrintInputs(inputStr)
+	if appendedString == nil {
+		fmt.Println("Error when appending the strings")
+	}
+
+	utils.ReadIntAndWrite(appendedString)
+
+	fmt.Printf("\n")
+	fmt.Println("Program finished.")
 }

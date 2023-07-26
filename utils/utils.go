@@ -61,7 +61,5 @@ func ReadIntAndWrite(appendedString string) {
 		fmt.Println(appendedString)
 	}
 
-	fmt.Printf("\n")
-	fmt.Println("Program finished.")
 	return
 }
