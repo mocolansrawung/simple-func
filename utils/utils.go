@@ -52,3 +52,16 @@ func appendAndPrintInputs(inputStr []string) (result string) {
 	fmt.Println("Inputs error")
 	return result
 }
+
+func readIntAndWrite(appendedString string) {
+	inputInt, _ := scanInputs(1, "int")
+	input := inputInt[0]
+
+	for i := 0; i < input; i++ {
+		fmt.Println(appendedString)
+	}
+
+	fmt.Printf("\n")
+	fmt.Println("Program finished.")
+	return
+}
