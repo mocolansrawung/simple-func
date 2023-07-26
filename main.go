@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"simplefunc/utils/utils"
+	"main/utils/utils"
 )
 
 func main() {
