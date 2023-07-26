@@ -42,3 +42,13 @@ func readAndWriteInputs() []string {
 
 	return inputStr
 }
+
+func appendAndPrintInputs(inputStr []string) (result string) {
+	if inputStr != nil {
+		result := inputStr[0] + inputStr[1]
+		fmt.Println(result)
+		return result
+	}
+	fmt.Println("Inputs error")
+	return result
+}
